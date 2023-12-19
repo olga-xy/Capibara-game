@@ -1,0 +1,321 @@
+<html>
+<head>
+
+<style>
+#header{
+	position: fixed;
+	width: 400px;
+	height: 20px;
+	margin-top: 30px;
+	margin-left: 800px;
+	}
+.new	{
+	width: 50px;
+	height: 50px;
+	}
+#footer{
+	position: fixed;
+	width: 200px;
+	height: 40px;
+	margin-top: 900px;
+	margin-left: 800px;
+	}
+#pic	{
+	position: fixed;
+	margin-top: 600px;
+	margin-left: 800px;
+	}
+.new1	{
+	position: fixed;
+	margin-top: 100px;
+	margin-left: 800px;
+	}
+.new2	{
+	position: fixed;
+	margin-top: -100px;
+	margin-left: 800px;
+	}
+
+</style>
+
+<body background="pole_2.png">
+<script>
+
+var y=0, x=0, x1=0, y1=0, x2=0, y2=0, x3=0, y3=0, x4=0, y4=0, x5=0, y5=0, x6=0, y6=0, x7=0, y7=0, x8=0, y8=0;
+var a=0, b=0, c=0, a1=0, b1=0, c1=0, a2=0, b2=0, c2=0, a3=0, b3=0, c3=0;
+var d=0, e=0, f=0, d1=0, e1=0, f1=0, d2=0, e2=0, f2=0, d3=0, e3=0, f3=0;
+var j=3, m=0, m2=0, m3=0, k=0, k2=0, k3=0;
+var itl, itr, itu, itd;
+
+
+function leftt()
+  {
+    clearInterval(itl);
+    clearInterval(itr);
+    clearInterval(itu);
+    clearInterval(itd);
+    itl = setInterval(left, 100);
+  }
+
+function rightt()
+  {
+    clearInterval(itr);
+    clearInterval(itl);
+    clearInterval(itu);
+    clearInterval(itd);
+    itr = setInterval(right, 100);
+  }
+
+
+function right()
+  {
+    if (x < 810) x += 10;
+    pic.style.left = x + "px";
+    pic.src='capibara_5.png'
+  }
+
+function left()
+  {
+
+    if (x > -800) x -= 10;
+    pic.style.left = x + "px";
+    pic.src='capibara_6.png'
+  }
+
+
+
+function downm()
+  {
+    if (y2 < 1220) y2 += 10;
+    if (y2 == 1220) {y2 = 0; x2 = Math.floor(Math.random() * 1000 - 500); man.style.left = x2 + "px";}
+    man.style.top = y2 + "px";
+  }
+
+function downm1()
+  {
+    if (j >= 10)
+      {
+        z=1;
+      }
+        if (z >= 1)
+          {
+	    if (y3 < 1220) y3 += 10;
+	    if (y3 == 1220) {y3 = 0; x3 = Math.floor(Math.random() * 1000 - 500); man1.style.left = x3 + "px";}
+	    man1.style.top = y3 + "px";
+          }
+  }
+
+function downm2()
+  {
+    if (j >= 20)
+      {
+        m2=2;
+      }
+        if (m2 >= 2)
+	  {
+	    if (y5 < 1220) y5 += 10;
+	    if (y5 == 1220) {y5 = 0; x5 = Math.floor(Math.random() * 1000 - 500); man2.style.left = x5 + "px";}
+	    man2.style.top = y5 + "px";
+	  }
+  }
+
+function downm3()
+  {
+    if (j >= 30)
+      {
+	m3=3;
+      }
+        if (m3 >= 3)
+	  {
+	    if (y6 < 1220) y6 += 10;
+	    if (y6 == 1220) {y6 = 0; x6 = Math.floor(Math.random() * 1000 - 500); man3.style.left = x6 + "px";}
+	    man3.style.top = y6 + "px";
+	  }
+  }
+
+
+
+function downk()
+  {
+    if (y1 < 1220) y1 += 10;
+    if (y1 >= 1220) {y1 = 0; x1 = Math.floor(Math.random() * 1000 - 500); kam.style.left = x1 + "px";}
+    kam.style.top = y1 + "px";
+  }
+
+function downk1()
+  {
+    if (j >= 10)
+      {
+        k=1;
+
+      }
+        if (k >= 1)
+          {
+	    if (y4 < 1220) y4 += 10;
+	    if (y4 == 1220) {y4 = 0; x4 = Math.floor(Math.random() * 1000 - 500); kam1.style.left = x4 + "px";}
+	    kam1.style.top = y4 + "px";
+          }
+  }
+
+function downk2()
+  {
+    if (j >= 20)
+      {
+        k2=2;
+      }
+        if (k2 >= 2)
+          {
+	    if (y7 < 1220) y7 += 10;
+	    if (y7 == 1220) {y7 = 0; x7 = Math.floor(Math.random() * 1000 - 500); kam2.style.left = x7 + "px";}
+	    kam2.style.top = y7 + "px";
+	  }
+  }
+
+function downk3()
+  {
+    if (j >= 30)
+      {
+        k3=3;
+      }
+        if (k3 >= 3)
+	  {
+	     if (y8 < 1220) y8 += 10;
+	     if (y8 == 1220) {y8 = 0; x8 = Math.floor(Math.random() * 1000 - 500); kam3.style.left = x8 + "px";}
+	     kam3.style.top = y8 + "px";
+	  }
+  }
+
+  setInterval(downk, 30);
+  setInterval(downk1, 30);
+  setInterval(downk2, 30);
+  setInterval(downk3, 30);
+
+  setInterval(downm, 50);
+  setInterval(downm1, 50);
+  setInterval(downm2, 50);
+  setInterval(downm3, 50);
+
+  setInterval(chekm, 10);
+  setInterval(chekk, 10);
+  setInterval(chek, 10);
+
+function chekm()
+  {
+     a = (x2+25)-(x+100)
+     b = y2-500-y
+     c = Math.floor(Math.sqrt(a*a+b*b));
+     if (c <= 120)
+       {
+        j++;
+        y2 = 0; x2 = Math.floor(Math.random() * 1000 - 500); man.style.left = x2 + "px";
+       }
+
+     a1 = (x3+25)-(x+100)
+     b1 = y3-700-y
+     c1 = Math.floor(Math.sqrt(a1*a1+b1*b1));
+     if (c1 <= 120)
+       {
+        j++;
+        y3 = 0; x3 = Math.floor(Math.random() * 1000 - 500); man1.style.left = x3 + "px";
+       }
+
+     a2 = (x5+25)-(x+100)
+     b2 = y5-700-y
+     c2 = Math.floor(Math.sqrt(a2*a2+b2*b2));
+     if (c2 <= 120)
+       {
+        j++;
+        y5 = 0; x5 = Math.floor(Math.random() * 1000 - 500); man2.style.left = x5 + "px";
+       }
+
+     a3 = (x6+25)-(x+100)
+     b3 = y6-700-y
+     c3 = Math.floor(Math.sqrt(a3*a3+b3*b3));
+     if (c3 <= 120)
+       {
+        j++;
+        y6 = 0; x6 = Math.floor(Math.random() * 1000 - 500); man3.style.left = x6 + "px";
+       }
+  }
+
+function chekk()
+  {
+     d = (x1+35)-(x+100)
+     e = y1-500-y
+     f = Math.sqrt(d*d+e*e);
+     header.innerHTML = "Жизней " + j;
+     if (f <= 125)
+       {
+         j--;
+         y1 = 0; x1 = Math.floor(Math.random() * 1000 - 500); kam.style.left = x1 + "px";
+       }
+
+     d1 = (x4+35)-(x+100)
+     e1 = y4-700-y
+     f1 = Math.sqrt(d1*d1+e1*e1);
+     if (f1 <= 125)
+       {
+         j--;
+         y4 = 0; x4 = Math.floor(Math.random() * 1000 - 500); kam1.style.left = x4 + "px";
+       }
+
+     d2 = (x7+35)-(x+100)
+     e2 = y7-700-y
+     f2 = Math.sqrt(d2*d2+e2*e2);
+     if (f2 <= 125)
+       {
+         j--;
+         y7 = 0; x7 = Math.floor(Math.random() * 1000 - 500); kam2.style.left = x7 + "px";
+       }
+
+     d3 = (x8+35)-(x+100)
+     e3 = y8-700-y
+     f3 = Math.sqrt(d3*d3+e3*e3);
+     if (f3 <= 125)
+       {
+         j--;
+         y8 = 0; x8 = Math.floor(Math.random() * 1000 - 500); kam3.style.left = x8 + "px";
+       }
+  }
+
+function chek()
+  {
+     if (j == 0)
+       {
+        alert("Game over")
+        location.reload();
+       }
+  }
+
+</script>
+
+
+<div id="header" style = "font-size: 300%;"><center><h1>Движение</h1></center></div>
+
+<img id="pic" src="capibara_5.png">
+
+<img id="man" class="new1" src="mandarin_3.png">
+<img id="man1" class="new2" src="mandarin_3.png">
+<img id="man2" class="new2" src="mandarin_3.png">
+<img id="man3" class="new2" src="mandarin_3.png">
+
+<img id="kam" class="new1" src="kamen_3.png">
+<img id="kam1" class="new2" src="kamen_3.png">
+<img id="kam2" class="new2" src="kamen_3.png">
+<img id="kam3" class="new2" src="kamen_3.png">
+
+
+<div id="footer"><center>
+
+<table style="width: 200px;">
+<tr><td><center>
+<input type="button" id="button2" class="new" value="Left" onclick='leftt()'>
+</td>
+<td><center>
+<input type="button" id="button3" class="new" value="Right" onclick='rightt()'>
+</td></tr>
+</table>
+
+</center></div>
+</body>
+</html>
